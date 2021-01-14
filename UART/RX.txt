@@ -1,0 +1,156 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    01:21:45 10/23/2020 
+-- Design Name: 
+-- Module Name:    RXUART - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity RxModule is
+    Port ( Rx : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+			  rst : in STD_LOGIC;
+           Data : out  STD_LOGIC_VECTOR (7 downto 0));
+end RxModule;
+
+architecture Behavioral of RxModule is
+	constant clkperbit : INTEGER := 5208;
+	constant clkdetection : INTEGER := 1302;
+	signal count_clk_receive, count_clk_detection, count_detection, state,index : INTEGER := 0;
+	signal detect, sb_check, receive, done : STD_LOGIC := '0';
+	signal Data_aux : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+begin
+	
+	
+-----------------------------------------------Maquina de estados-------------------------------------------------------------------
+	StateMachine : process(clk, rst)
+	begin
+		if rst = '1' then
+			state <= 0;
+		elsif clk'event and clk = '1' then
+		--------------------------------------------- State 0
+			if state = 0 and Rx = '0' then
+				state <= 1;
+			end if;
+		--------------------------------------------- State 1
+			if state = 1 and sb_check = '1' then
+				state <= 2;
+			elsif state = 1 and Rx = '1' then
+				state <= 0;
+			end if;
+		--------------------------------------------- State 2
+			if state = 2 and done = '1' then
+				state <= 0;
+			end if;
+		end if;
+	end process StateMachine;
+	
+--------------Adaptacao do clock para a velocidade de detecção do start bit (4x superior ao clock do protocolo UART 9600)------------
+	DetectionRate : process (clk, rst)
+	begin
+		if rst = '1' then
+			count_clk_detection <= 0;
+		elsif clk'event and clk = '1' then
+			if state = 1 then
+				if count_clk_detection = (clkdetection - 1) then
+					count_clk_detection <= 0;
+				else count_clk_detection <= count_clk_detection + 1;
+				end if;	
+			end if;
+		end if;
+	end process DetectionRate;
+	
+	detect <= '1' when count_clk_detection = (clkdetection - 1) else '0';
+	
+	--------------------------------------------Deteccao do start bit--------------------------------------------------------
+	StartBit : process(clk, rst)
+	begin
+		if rst = '1' then
+			count_detection <= 0;
+		elsif clk'event and clk = '1' then
+			if state = 1 then
+				if detect = '1' then
+					if count_detection = 3  then
+						count_detection <= 0;
+					else count_detection <= count_detection + 1;
+					end if;
+				end if;	
+			elsif Rx = '1' or count_detection = 3 then
+					count_detection <= 0;
+			end if;
+		end if;
+	end process StartBit;
+
+	sb_check <= '1' when count_detection = 3 else '0';
+	
+	------------------------Adaptacao do clock para a velocidade do protocolo UART9600 bits/s----------------------------
+	ReceiveRate : process (clk, rst)
+	begin
+		if rst = '1' then
+			count_clk_receive <= 0;
+		elsif clk'event and clk = '1' then
+			if state = 2 then
+				if count_clk_receive = (clkperbit - 1) then
+					count_clk_receive <= 0;
+				else count_clk_receive <= count_clk_receive + 1;
+				end if;	
+			end if;
+		end if;
+	end process ReceiveRate;
+	
+	receive <= '1' when count_clk_receive = (clkperbit - 1) else '0';
+	
+	-----------------------------------------------------Receber dados---------------------------------------------------------
+	ReceiveData : process (clk, rst)
+	begin
+		if rst = '1' then
+			index <= 0;
+			Data_aux <= "00000000";
+		elsif clk'event and clk = '1' then
+				if receive = '1' then
+					if index = 8 then
+						index <= 0;
+						--Data_aux(index) <= Rx;
+						--index <= index + 1;
+					else 
+						Data_aux(index) <= Rx;
+						index <= index + 1;
+					end if;
+				elsif index = 8 then
+					index <= 0;
+				end if;
+				
+		end if;
+	end process ReceiveData;
+	
+	done <= '1' when index = 8 else '0';
+	Data <= Data_aux;
+	
+end Behavioral;

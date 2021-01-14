@@ -1,0 +1,5433 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<Snoopy revision="0" version="0">
+  <pnml>
+    <net id="1" name="Controller" type="IOPT">
+      <input>
+        <signal id="PRES1_IN_1" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="30"/>
+          </graphics>
+        </signal>
+        <signal id="TICKET_IN_1" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="90"/>
+          </graphics>
+        </signal>
+        <signal id="PRES2_IN_1" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="60"/>
+          </graphics>
+        </signal>
+        <signal id="PRES1_OUT_1" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="200"/>
+          </graphics>
+        </signal>
+        <signal id="PRES2_OUT_1" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="40" y="230"/>
+          </graphics>
+        </signal>
+        <signal id="TICKET_OUT_1" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="40" y="260"/>
+          </graphics>
+        </signal>
+        <signal id="hora_entrada_OK" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="830"/>
+          </graphics>
+        </signal>
+        <signal id="hora_saida_OK" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="850"/>
+          </graphics>
+        </signal>
+        <signal id="PRES1_IN_2" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="370"/>
+          </graphics>
+        </signal>
+        <signal id="PRES2_IN_2" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="400"/>
+          </graphics>
+        </signal>
+        <signal id="TICKET_IN_2" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="430"/>
+          </graphics>
+        </signal>
+        <signal id="PRES1_OUT_2" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="520"/>
+          </graphics>
+        </signal>
+        <signal id="PRES2_OUT_2" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="540"/>
+          </graphics>
+        </signal>
+        <signal id="TICKET_OUT_2" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="560"/>
+          </graphics>
+        </signal>
+        <signal id="AND_12a" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="630"/>
+          </graphics>
+        </signal>
+        <signal id="AND_12b" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="650"/>
+          </graphics>
+        </signal>
+        <signal id="AND_21a" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="40" y="670"/>
+          </graphics>
+        </signal>
+        <signal id="AND_21b" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="40" y="690"/>
+          </graphics>
+        </signal>
+      </input>
+      <output>
+        <signal id="CANC_IN_1" type="boolean" value="0" gpio_nr="0" min="0" max="1" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="120"/>
+          </graphics>
+        </signal>
+        <signal id="lugares_livres" type="range" value="0" gpio_nr="0" min="0" max="4" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="890"/>
+          </graphics>
+        </signal>
+        <signal id="lugares_preenchidos" type="range" value="0" gpio_nr="0" min="0" max="4" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="910"/>
+          </graphics>
+        </signal>
+        <signal id="CANC_OUT_1" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="30" y="300"/>
+          </graphics>
+        </signal>
+        <signal id="CANC_IN_2" type="boolean" value="0" gpio_nr="0" min="0" max="1" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="460"/>
+          </graphics>
+        </signal>
+        <signal id="CANC_OUT_2" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="40" y="580"/>
+          </graphics>
+        </signal>
+        <signal id="piso1" type="range" value="0" gpio_nr="0" min="0" max="8" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="710"/>
+          </graphics>
+        </signal>
+        <signal id="piso2" type="range" value="0" gpio_nr="0" min="0" max="8" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="730"/>
+          </graphics>
+        </signal>
+        <signal id="PERIGO" type="boolean" value="0" gpio_nr="0" min="0" max="1" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="790"/>
+          </graphics>
+        </signal>
+        <signal id="parque_cheio" type="boolean" value="0" gpio_nr="0" min="0" max="1" wrap="0">
+          <graphics>
+            <position page="1" x="40" y="750"/>
+          </graphics>
+        </signal>
+        <signal id="rampa1_ocupada" type="boolean" value="0" gpio_nr="0" min="0" max="1" wrap="0">
+          <graphics>
+            <position page="1" x="60" y="940"/>
+          </graphics>
+        </signal>
+        <signal id="rampa2_ocupada" type="boolean" value="0" gpio_nr="0" min="0" max="1" wrap="0">
+          <graphics>
+            <position page="1" x="60" y="960"/>
+          </graphics>
+        </signal>
+      </output>
+      <variable/>
+      <place id="2">
+        <name>
+          <text>entrada_livre_1</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="400" y="1210"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>0</text>
+                <expression>
+                  <operand type="literal" value="0" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="3">
+        <name>
+          <text>sensor_1_ON_entrada_1</text>
+          <graphics>
+            <offset x="-60" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_1 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="450" y="1070"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="4" source="2" target="3">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="5">
+        <name>
+          <text>carro_na_entrada 1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="630" y="1000"/>
+        </graphics>
+      </place>
+      <arc id="6" source="3" target="5">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="7">
+        <name>
+          <text>sensor_1_OFF_entrada_11</text>
+          <graphics>
+            <offset x="40" y="0"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="500" y="1110"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="8" source="5" target="7">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="9" source="7" target="2">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="10">
+        <name>
+          <text>Botao_Ticket_IN_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>TICKET_IN_1 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="TICKET_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="960" y="1100"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="12">
+        <name>
+          <text>Lugares_vazios</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>8</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>8</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1050" y="970"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="lugares_livres">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>«Lugares_vazios 12»</text>
+                <expression>
+                  <operand type="place-marking" idRef="12" name="Lugares_vazios 12" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+                <expression/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="13" source="12" target="10">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="14">
+        <name>
+          <text>lugares_ocupados</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>8</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1080" y="1230"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="lugares_preenchidos">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>«lugares_ocupados 14»</text>
+                <expression>
+                  <operand type="place-marking" idRef="14" name="lugares_ocupados 14" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+          <signalOutputAction idRef="parque_cheio">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text>«lugares_ocupados 14» = 8</text>
+                <expression>
+                  <operand type="place-marking" idRef="14" name="lugares_ocupados 14" seq="1"/>
+                  <operation operator="equal" seq="2">
+                    <operand type="literal" value="8" seq="3"/>
+                  </operation>
+                </expression>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="15" source="10" target="14">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="16">
+        <name>
+          <text>cancela_aberta_1</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="860" y="1180"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+                <expression/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="17" source="10" target="16">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="18">
+        <name>
+          <text>sensor_2_entrada_1</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_IN_1 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="680" y="1280"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="19" source="16" target="18">
+        <type>normal</type>
+        <graphics>
+          <offset x="20" y="40"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="20">
+        <name>
+          <text>A_entrar_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="570" y="1300"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="21" source="18" target="20">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="22">
+        <name>
+          <text>passou_cancela_1</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="470" y="1310"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="23" source="20" target="22">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="24">
+        <name>
+          <text>passou_canc_entrada_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="360" y="1340"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="2"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="25" source="22" target="24">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="26">
+        <name>
+          <text>Entrou_1</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_IN_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="310" y="1270"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="27" source="24" target="26">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="28" source="26" target="2">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="32">
+        <name>
+          <text>abortou_entrada_1</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="4"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="730" y="1170"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="33" source="16" target="32">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-2" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="34" source="32" target="2">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="35" source="32" target="12">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="-10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="36">
+        <name>
+          <text>saida_livre_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1850" y="1030"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_OUT_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>0</text>
+                <expression>
+                  <operand type="literal" value="0" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="37">
+        <name>
+          <text>sensor_1_ON_saida_1</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_1 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_1" seq="4"/>
+                <operation operator="equal" seq="5">
+                  <operand type="literal" value="1" seq="6"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1710" y="1000"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="39" source="36" target="37">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="40">
+        <name>
+          <text>carro_na_saida_1</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1570" y="1040"/>
+        </graphics>
+      </place>
+      <arc id="41" source="37" target="40">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="42">
+        <name>
+          <text>Botao_Ticket_OUT_1</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>TICKET_OUT_1 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="TICKET_OUT_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="4"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1160" y="1090"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="44" source="14" target="42">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="45" source="42" target="12">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="12"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="46">
+        <name>
+          <text>sensor_1_OFF_saida_1</text>
+          <graphics>
+            <offset x="-30" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1730" y="1060"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="47" source="40" target="46">
+        <type>normal</type>
+        <graphics>
+          <offset x="20" y="10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="48" source="46" target="36">
+        <type>normal</type>
+        <graphics>
+          <offset x="10" y="10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-5" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="49">
+        <name>
+          <text>canc_saida_aberta_1</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1280" y="1150"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_OUT_1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="50" source="42" target="49">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="50"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="6" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="51">
+        <name>
+          <text>sensor_2_saida_1</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_OUT_1 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_OUT_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1380" y="1200"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="52" source="49" target="51">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="53">
+        <name>
+          <text>A_sair_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1480" y="1200"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_OUT_1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="54" source="51" target="53">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="55">
+        <name>
+          <text>passou_cancela_saida_1</text>
+          <graphics>
+            <offset x="-30" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1580" y="1200"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="56" source="53" target="55">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="57">
+        <name>
+          <text>passou_canc_saida_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1690" y="1200"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_OUT_1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="2"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="58" source="55" target="57">
+        <type>normal</type>
+        <graphics>
+          <offset x="50" y="0"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-2" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="59">
+        <name>
+          <text>saiu_1</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_OUT_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_OUT_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1840" y="1170"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="60" source="57" target="59">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-8" y="9"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="61" source="59" target="36">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="62">
+        <name>
+          <text>saida_1_valida</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>hora_saida_OK = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="hora_saida_OK" seq="4"/>
+                <operation operator="equal" seq="5">
+                  <operand type="literal" value="1" seq="6"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1440" y="1030"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="63" source="40" target="62">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="64">
+        <name>
+          <text>saida_1_OK</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1310" y="1070"/>
+        </graphics>
+      </place>
+      <arc id="65" source="62" target="64">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="66" source="64" target="42">
+        <type>normal</type>
+        <graphics>
+          <offset x="-30" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="67">
+        <name>
+          <text>entrada_1_valida</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>hora_entrada_OK = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="hora_entrada_OK" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="720" y="1030"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="68">
+        <name>
+          <text>entrada_1_validada</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="830" y="1040"/>
+        </graphics>
+      </place>
+      <arc id="69" source="5" target="67">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="70" source="67" target="68">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="71" source="68" target="10">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="72">
+        <name>
+          <text>entrada_livre_2</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="340" y="1540"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>0</text>
+                <expression>
+                  <operand type="literal" value="0" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="73">
+        <name>
+          <text>sensor_1_ON_entrada_2</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_2 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="460" y="1440"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="74" source="72" target="73">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="75">
+        <name>
+          <text>carro_na_entrada_2</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="620" y="1420"/>
+        </graphics>
+      </place>
+      <arc id="76" source="73" target="75">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="77">
+        <name>
+          <text>sensor_1_OFF_entrada_2</text>
+          <graphics>
+            <offset x="30" y="0"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_2" seq="4"/>
+                <operation operator="equal" seq="5">
+                  <operand type="literal" value="0" seq="6"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="480" y="1490"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="78" source="75" target="77">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="6" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="79" source="77" target="72">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="80">
+        <name>
+          <text>entrada_2_valida</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>hora_entrada_OK = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="hora_entrada_OK" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="720" y="1410"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="81" source="75" target="80">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="82">
+        <name>
+          <text>entrada_2_validada</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="830" y="1360"/>
+        </graphics>
+      </place>
+      <arc id="83" source="80" target="82">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="84">
+        <name>
+          <text>botao_ticket_IN_2</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>TICKET_IN_2 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="TICKET_IN_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="910" y="1300"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="85" source="82" target="84">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="86" source="12" target="84">
+        <type>normal</type>
+        <graphics>
+          <offset x="-10" y="120"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="9" y="8"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="87" source="84" target="14">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="-50" y="40"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="88">
+        <name>
+          <text>cancela_aberta_2</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1050" y="1380"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="89" source="84" target="88">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="90">
+        <name>
+          <text>abortou_entrada_2</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_2" seq="5"/>
+                <operation operator="equal" seq="6">
+                  <operand type="literal" value="0" seq="7"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="890" y="1480"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="91" source="88" target="90">
+        <type>normal</type>
+        <graphics>
+          <offset x="-10" y="30"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="92" source="90" target="72">
+        <type>normal</type>
+        <graphics>
+          <offset x="-170" y="70"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="93" source="90" target="12">
+        <type>normal</type>
+        <graphics>
+          <offset x="120" y="-150"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-9" y="2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="94">
+        <name>
+          <text>sensor_2_entrada_2</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_IN_2 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_IN_2" seq="2"/>
+                <operation operator="equal" seq="3">
+                  <operand type="literal" value="1" seq="4"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="910" y="1580"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="95" source="88" target="94">
+        <type>normal</type>
+        <graphics>
+          <offset x="-10" y="80"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="9" y="9"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="96">
+        <name>
+          <text>A_entrar_2</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="810" y="1590"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="97" source="94" target="96">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="98">
+        <name>
+          <text>passou_cancela_2</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="680" y="1630"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="99" source="96" target="98">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="100">
+        <name>
+          <text>passou_canc_entrada_2</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="550" y="1640"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_IN_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="101" source="98" target="100">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="102">
+        <name>
+          <text>Entrou_2</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_IN_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_IN_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="440" y="1650"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="103" source="100" target="102">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="104" source="102" target="72">
+        <type>normal</type>
+        <graphics>
+          <offset x="-30" y="-20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="105" source="14" target="32">
+        <type>normal</type>
+        <graphics>
+          <offset x="-150" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="106" source="14" target="90">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="107">
+        <name>
+          <text>saida_livre_2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1870" y="1350"/>
+        </graphics>
+      </place>
+      <transition id="108">
+        <name>
+          <text>sensor_1_ON_saida_2</text>
+          <graphics>
+            <offset x="-30" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_2 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1740" y="1330"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="109" source="107" target="108">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="110">
+        <name>
+          <text>carro_na_saida_2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1620" y="1340"/>
+        </graphics>
+      </place>
+      <transition id="111">
+        <name>
+          <text>sensor_1_OFF_saida_21</text>
+          <graphics>
+            <offset x="-30" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1730" y="1390"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="112" source="108" target="110">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="113" source="110" target="111">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="30"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="114" source="111" target="107">
+        <type>normal</type>
+        <graphics>
+          <offset x="30" y="0"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-4" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="115">
+        <name>
+          <text>saida_2_valida</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>hora_saida_OK = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="hora_saida_OK" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1510" y="1330"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="116" source="110" target="115">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="117">
+        <name>
+          <text>saida_2_OK</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1370" y="1320"/>
+        </graphics>
+      </place>
+      <arc id="118" source="115" target="117">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="119">
+        <name>
+          <text>Botao_Ticket_OUT_2</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>TICKET_OUT_2 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="TICKET_OUT_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1210" y="1350"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="120" source="117" target="119">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="121" source="14" target="119">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="122" source="119" target="12">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-8" y="10"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="123">
+        <name>
+          <text>canc_saida_aberta_2</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1290" y="1480"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_OUT_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="124" source="119" target="123">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="125">
+        <name>
+          <text>sensor_2_saida_2</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_OUT_2 = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_OUT_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1390" y="1520"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="126" source="123" target="125">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="127">
+        <name>
+          <text>A_sair_2</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1510" y="1520"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_OUT_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="128" source="125" target="127">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="129">
+        <name>
+          <text>passou_cancela_saida_2</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1600" y="1520"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="130" source="127" target="129">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="131">
+        <name>
+          <text>passou_canc_saida_2</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1710" y="1520"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="CANC_OUT_2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="132" source="129" target="131">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="133">
+        <name>
+          <text>saiu_2</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES2_OUT_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES2_OUT_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1830" y="1510"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="134" source="131" target="133">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="135" source="133" target="107">
+        <type>normal</type>
+        <graphics>
+          <offset x="20" y="-10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-8" y="1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="136">
+        <name>
+          <text>sensor1_OFF_saida_22</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1490" y="1400"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="137" source="117" target="136">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="30"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="138" source="136" target="107">
+        <type>normal</type>
+        <graphics>
+          <offset x="240" y="40"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="139">
+        <name>
+          <text>sensor_1_OFF_entrada_12</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="4"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="670" y="1100"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="140" source="68" target="139">
+        <type>normal</type>
+        <graphics>
+          <offset x="-10" y="30"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="141" source="139" target="2">
+        <type>normal</type>
+        <graphics>
+          <offset x="-50" y="50"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="142">
+        <name>
+          <text>sensor_1_OFF_entrada_22</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_IN_2 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_IN_2" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="660" y="1490"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="143" source="82" target="142">
+        <type>normal</type>
+        <graphics>
+          <offset x="10" y="80"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="6" y="12"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="144" source="142" target="72">
+        <type>normal</type>
+        <graphics>
+          <offset x="-60" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="145">
+        <name>
+          <text>sensor_1_OFF_saida_12</text>
+          <graphics>
+            <offset x="-30" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>PRES1_OUT_1 = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="PRES1_OUT_1" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1520" y="1090"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="146" source="64" target="145">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="147" source="145" target="36">
+        <type>normal</type>
+        <graphics>
+          <offset x="170" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="164">
+        <name>
+          <text>Piso_1</text>
+          <graphics>
+            <offset x="0" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>4</text>
+        </bound>
+        <graphics>
+          <position page="1" x="790" y="650"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="piso1">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>«Piso_1 164»</text>
+                <expression>
+                  <operand type="place-marking" idRef="164" name="Piso_1 164" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="165" source="10" target="164">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-9" y="6"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="166">
+        <name>
+          <text>sensor_12a</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12a = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="960" y="110"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="167" source="164" target="166">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="168">
+        <name>
+          <text>IN_rampa_UP_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1100" y="60"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="rampa1_ocupada">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="169" source="166" target="168">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="170">
+        <name>
+          <text>sensor_12b</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1290" y="50"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="171" source="168" target="170">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="172">
+        <name>
+          <text>piso_2</text>
+          <graphics>
+            <offset x="0" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>8</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1880" y="660"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="piso2">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>«piso_2 172»</text>
+                <expression>
+                  <operand type="place-marking" idRef="172" name="piso_2 172" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="174" source="84" target="172">
+        <type>normal</type>
+        <graphics>
+          <offset x="180" y="-160"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="175">
+        <name>
+          <text>sensor_21a</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21a = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1560" y="790"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="176" source="172" target="175">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="177">
+        <name>
+          <text>IN_rampa_DOWN_1</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1450" y="820"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="rampa2_ocupada">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+                <expression/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="178" source="175" target="177">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="179">
+        <name>
+          <text>sensor_21b</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21b = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1320" y="850"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="180" source="177" target="179">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="182">
+        <name>
+          <text>sensor_21b_P1</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21b = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1030" y="440"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="183" source="164" target="182">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="184">
+        <name>
+          <text>contramao_UP</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1130" y="420"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="PERIGO">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="185" source="182" target="184">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="186">
+        <name>
+          <text>sensor_21b_P1_OFF</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1210" y="410"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="187" source="184" target="186">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="188" source="186" target="164">
+        <type>normal</type>
+        <graphics>
+          <offset x="-100" y="80"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="189">
+        <name>
+          <text>sensor12a_OFF</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="4"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1000" y="160"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="190" source="168" target="189">
+        <type>normal</type>
+        <graphics>
+          <offset x="20" y="40"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="191" source="189" target="164">
+        <type>normal</type>
+        <graphics>
+          <offset x="-20" y="70"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="192">
+        <name>
+          <text>IN_rampa_UP_2</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1400" y="60"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="rampa1_ocupada">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="193" source="170" target="192">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="194">
+        <name>
+          <text>sensor_12a_passou</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1540" y="70"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="195" source="192" target="194">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="196">
+        <name>
+          <text>IN_rampa_UP_3</text>
+          <graphics>
+            <offset x="0" y="-40"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1660" y="110"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="rampa1_ocupada">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="197" source="194" target="196">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="-10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="198">
+        <name>
+          <text>sensor_12b_passou</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="4"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1760" y="240"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="199" source="196" target="198">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="201" source="198" target="172">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="202">
+        <name>
+          <text>sensor_12b_off</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1250" y="120"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="203">
+        <name>
+          <text>marcha_atras_1</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1150" y="200"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="PERIGO">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+                <expression/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="204" source="192" target="202">
+        <type>normal</type>
+        <graphics>
+          <offset x="-50" y="30"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="205" source="202" target="203">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="206">
+        <name>
+          <text>sensor_12b_on_MA</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1260" y="170"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="207" source="203" target="206">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="208" source="206" target="192">
+        <type>normal</type>
+        <graphics>
+          <offset x="60" y="10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="209">
+        <name>
+          <text>sensor_12a_MA_OFF</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1020" y="230"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="210" source="203" target="209">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="211" source="209" target="164">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="8" y="9"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="212">
+        <name>
+          <text>sensor_12a_MA</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12a = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1490" y="160"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="213">
+        <name>
+          <text>marcha_atras_2</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1390" y="210"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="PERIGO">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="214">
+        <name>
+          <text>sensor_12a_MA_OFF2</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1510" y="210"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="215" source="196" target="212">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="216" source="212" target="213">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="217" source="213" target="214">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="218" source="214" target="196">
+        <type>normal</type>
+        <graphics>
+          <offset x="80" y="0"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="219">
+        <name>
+          <text>sensor_12b_OFF_MA2</text>
+          <graphics>
+            <offset x="-30" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1260" y="240"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="220">
+        <name>
+          <text>marcha_atras_3</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1140" y="280"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="PERIGO">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="221">
+        <name>
+          <text>sensor12a_OFF_MA</text>
+          <graphics>
+            <offset x="-30" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1050" y="310"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="222" source="213" target="219">
+        <type>normal</type>
+        <graphics>
+          <offset x="-30" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="223">
+        <name>
+          <text>sensor_12b_ON_MA2</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1260" y="290"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="224" source="219" target="220">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="225" source="220" target="223">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="226" source="223" target="213">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="-10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="227" source="220" target="221">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="228" source="221" target="164">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="229">
+        <name>
+          <text>Piso_1_comp</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="690" y="540"/>
+        </graphics>
+      </place>
+      <arc id="230" source="229" target="166">
+        <type>normal</type>
+        <graphics>
+          <offset x="10" y="-190"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-8" y="0"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="231" source="198" target="229">
+        <type>normal</type>
+        <graphics>
+          <offset x="-390" y="50"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="233">
+        <name>
+          <text>IN_RAMPA_DOWN_2</text>
+          <graphics>
+            <offset x="-30" y="-40"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1210" y="870"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="rampa2_ocupada">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="234">
+        <name>
+          <text>sensor_21a_off</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21a" seq="2"/>
+                <operation operator="equal" seq="3">
+                  <operand type="literal" value="0" seq="4"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1090" y="860"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="235">
+        <name>
+          <text>IN_RAMPA_DOWN_3</text>
+          <graphics>
+            <offset x="0" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="960" y="850"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="rampa2_ocupada">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="236">
+        <name>
+          <text>sensor_21b_off</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="900" y="800"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="237" source="179" target="233">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="238" source="233" target="234">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="239" source="234" target="235">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="240" source="235" target="236">
+        <type>normal</type>
+        <graphics>
+          <offset x="10" y="-30"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="241" source="236" target="164">
+        <type>normal</type>
+        <graphics>
+          <offset x="-20" y="0"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="12"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="242">
+        <name>
+          <text>sensor_21a_off</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21a" seq="4"/>
+                <operation operator="equal" seq="5">
+                  <operand type="literal" value="0" seq="6"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1560" y="720"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="243" source="177" target="242">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="-40"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="244" source="242" target="172">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="245">
+        <name>
+          <text>sensor_21b_OFF_MA</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1360" y="780"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="246">
+        <name>
+          <text>marcha_atras_4</text>
+          <graphics>
+            <offset x="-20" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1460" y="680"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="PERIGO">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="247">
+        <name>
+          <text>sensor_21b_ON_MA</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21b = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1330" y="700"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="248" source="233" target="245">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="249" source="245" target="246">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="250" source="246" target="247">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="251" source="247" target="233">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="9" y="8"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="252">
+        <name>
+          <text>sensor_21a_OFF_MA</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1610" y="640"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="253" source="246" target="252">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-2" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="254" source="252" target="172">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="255">
+        <name>
+          <text>sensor_21aON_MA</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21a = 1</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1060" y="730"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="256" source="235" target="255">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="257">
+        <name>
+          <text>marcha_atras_5</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1170" y="660"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="PERIGO">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <arc id="258" source="255" target="257">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-5" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="259">
+        <name>
+          <text>sensor_21a_OFF_MA</text>
+          <graphics>
+            <offset x="-20" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_21a = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_21a" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1060" y="650"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="260" source="257" target="259">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="261" source="259" target="235">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="8" y="9"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="266" source="257" target="245">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="267">
+        <name>
+          <text>sensor_12b_P2</text>
+          <graphics>
+            <offset x="0" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 1 AND rampa1_ocupada = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="1" seq="3"/>
+                </operation>
+                <operation operator="and" seq="4">
+                  <operand type="output-signal" idRef="rampa1_ocupada" seq="5"/>
+                </operation>
+                <operation operator="equal" seq="6">
+                  <operand type="literal" value="0" seq="7"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1740" y="560"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="268">
+        <name>
+          <text>contramao_down</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1570" y="540"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="PERIGO">
+            <value>
+              <concreteSyntax language="iopt">
+                <text>1</text>
+                <expression>
+                  <operand type="literal" value="1" seq="1"/>
+                </expression>
+              </concreteSyntax>
+            </value>
+            <condition>
+              <concreteSyntax language="iopt">
+                <text/>
+              </concreteSyntax>
+            </condition>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="269">
+        <name>
+          <text>sensor_12b_P2_OFF</text>
+          <graphics>
+            <offset x="-10" y="-20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="iopt">
+              <text>AND_12b = 0</text>
+              <expression>
+                <operand type="input-signal" idRef="AND_12b" seq="1"/>
+                <operation operator="equal" seq="2">
+                  <operand type="literal" value="0" seq="3"/>
+                </operation>
+              </expression>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1440" y="540"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="270" source="267" target="268">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="271" source="268" target="269">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="272" source="269" target="172">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="2" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="273" source="172" target="267">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="274">
+        <name>
+          <text>Piso_1_comp</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>1</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1840" y="780"/>
+        </graphics>
+      </place>
+      <arc id="275" source="274" target="175">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="276" source="236" target="274">
+        <type>normal</type>
+        <graphics>
+          <offset x="160" y="210"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="278" source="172" target="108">
+        <type>normal</type>
+        <graphics>
+          <offset x="190" y="250"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="9" y="7"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="279" source="164" target="37">
+        <type>normal</type>
+        <graphics>
+          <offset x="310" y="220"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+    </net>
+  </pnml>
+</Snoopy>

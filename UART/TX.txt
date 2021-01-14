@@ -1,0 +1,133 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    12:54:01 10/21/2020 
+-- Design Name: 
+-- Module Name:    Transmiter - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity TxModule is
+    Port ( Transmit : in  STD_LOGIC;
+			  Load : in STD_LOGIC;
+           Data : in  STD_LOGIC_VECTOR (7 downto 0);
+           Tx : out  STD_LOGIC := '1' ;
+           clk : in  STD_LOGIC;
+			  rst : in STD_LOGIC);
+end TxModule;
+
+architecture Behavioral of TxModule is
+	signal TxArray : STD_LOGIC_VECTOR(9 downto 0) := "1000000000" ;
+	signal count,  state : INTEGER := 0;
+	signal index : INTEGER := 0;
+	constant clkperbit : INTEGER := 5208;
+	signal trans : STD_LOGIC := '0';
+	signal done : STD_LOGIC := '0';
+begin
+	
+	-------------------------------------Maquina de estados----------------------------------------------------------------------
+	
+	StateMachine : process(clk, rst)
+	begin
+		if rst = '1' then
+			state <= 0;
+		elsif clk'event and clk = '1' then
+		------------------------------- STATE 0
+			if state = 0  then
+				if Load = '1' then
+					state <= 1;
+				end if;
+			end if;
+			----------------------------- STATE 1
+			if state = 1 and Transmit = '1' then
+				state <= 2;
+			end if;	
+			---------------------------- STATE 2
+			if state = 2 and done = '1' then
+				state <= 0;
+			end if;
+		end if;
+	end process StateMachine;
+	
+
+	--------------------------------------Load dos dados da placa -------------------------------------------------------------------
+	LoadData : process (clk, rst)
+	begin
+		if rst = '1' then
+			TxArray <= "1000000000";
+		elsif clk'event and clk = '1' then
+			if state = 1 then
+				TxArray(0) <= '0';
+				TxArray(1) <= Data(0);
+				TxArray(2) <= Data(1);
+				TxArray(3) <= Data(2);
+				TxArray(4) <= Data(3);
+				TxArray(5) <= Data(4);
+				TxArray(6) <= Data(5);
+				TxArray(7) <= Data(6);
+				TxArray(8) <= Data(7);
+				TxArray(9) <= '1';
+			end if;
+		end if;
+	end process LoadData;
+	
+	-----------------------Adaptacao do clock para a velocidade do protocolo UART9600 bits/s--------------------------------
+	TransmissionRate : process (clk, rst)
+	begin
+		if rst = '1' then
+			count <= 0;
+		elsif clk'event and clk = '1' then
+			if state = 2 then
+				if count = (clkperbit - 1) then
+					count <= 0;
+				else count <= count + 1;
+				end if;	
+			end if;
+		end if;
+	end process TransmissionRate;
+	
+	trans <= '1' when count = (clkperbit - 1) else '0';
+	
+	------------------------------------Transmissao de dados------------------------------------------------------
+	Transmission : process(clk, rst)
+	begin
+		if rst = '1' then
+			index <= 0;
+		elsif clk'event and clk = '1' then
+			if trans = '1' then
+				if index = 10 then
+					index <= 0;
+				else 
+					Tx <= TxArray(index);
+					index <= index + 1;
+				end if;
+			elsif index = 10 then
+				index <= 0;
+			end if;
+		end if;
+	end process Transmission;
+	done <= '1' when index = 10 else '0';
+
+end Behavioral;

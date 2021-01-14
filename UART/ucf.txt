@@ -1,0 +1,40 @@
+NET "DATA_IN<0>" LOC= "F12";
+NET "DATA_IN<1>" LOC= "G12";
+NET "DATA_IN<2>" LOC= "H14";
+NET "DATA_IN<3>" LOC= "H13";
+NET "DATA_IN<4>" LOC= "J14";
+NET "DATA_IN<5>" LOC= "J13";
+NET "DATA_IN<6>" LOC= "K14";
+NET "DATA_IN<7>" LOC= "K13";
+NET "clk" LOC= "T9";
+NET "rst" LOC= "L14";
+NET "RX" LOC = "T13";
+NET "Load" LOC = "L13";
+NET "Transmit" LOC = "M14";
+
+
+NET "TX" LOC ="R13";
+NET "DATA_OUT<0>" LOC= "K12";
+NET "DATA_OUT<1>" LOC= "P14";
+NET "DATA_OUT<2>" LOC= "L12";
+NET "DATA_OUT<3>" LOC= "N14";
+NET "DATA_OUT<4>" LOC= "P13";
+NET "DATA_OUT<5>" LOC= "N12";
+NET "DATA_OUT<6>" LOC= "P12";
+NET "DATA_OUT<7>" LOC= "P11";
+
+NET "algarismo<0>" LOC = "N16";
+NET "algarismo<1>" LOC = "F13";
+NET "algarismo<2>" LOC = "R16";
+NET "algarismo<3>" LOC = "P15";
+NET "algarismo<4>" LOC = "N15";
+NET "algarismo<5>" LOC = "G13";
+NET "algarismo<6>" LOC = "E14";
+NET "algarismo<7>" LOC = "P16";
+NET "an0" LOC = "D14";
+NET "an1" LOC = "G14";
+NET "an2" LOC = "F14";
+NET "an3" LOC = "E13";
+
+
+
